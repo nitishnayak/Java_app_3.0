@@ -4,6 +4,10 @@ pipeline{
 
     agent any
     //agent { label 'Demo' }
+    tools {
+        maven 'MAVEN_3_9_11
+        jdk 'JDK19
+    }
 
     parameters{
 
