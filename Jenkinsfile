@@ -1,11 +1,11 @@
-@Library('my-shared-library') _
+'@Library('my-shared-library') _
 
 pipeline{
 
     agent any
     //agent { label 'Demo' }
     tools {
-        maven 'MAVEN'_3_9_11
+        maven 'MAVEN'_3_9_11'
         jdk 'jdk21'
     }
 
