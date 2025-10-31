@@ -6,7 +6,7 @@ pipeline{
     //agent { label 'Demo' }
     tools {
         maven 'MAVEN'_3_9_11
-        jdk 'JDK19'
+        jdk 'JDK21'
     }
 
     parameters{
