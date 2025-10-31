@@ -1,10 +1,9 @@
-'@Library('my-shared-library') _
+@Library('my-shared-library') _
 
 pipeline{
 
     agent any
     //agent { label 'Demo' }
- 
 
     parameters{
 
@@ -21,7 +20,7 @@ pipeline{
             steps{
             gitCheckout(
                 branch: "main",
-                url: "https://github.com/nitishnayak/Java_app_3.0.git"
+                url: "https://github.com/praveen1994dec/Java_app_3.0.git"
             )
             }
         }
