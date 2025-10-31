@@ -2,8 +2,13 @@
 
 pipeline{
 
-    agent any
-    //agent { label 'Demo' }
+    agent {
+        docker {
+            image 'maven:3.9.9-eclipse-temurin-21'
+        }
+    }
+    
+    
 
     parameters{
 
@@ -22,6 +27,12 @@ pipeline{
                 branch: "main",
                 url: "https://github.com/praveen1994dec/Java_app_3.0.git"
             )
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'mvn clean install -Dmaven.compiler.source=21 -Dmaven.compiler.target=21'
             }
         }
       
